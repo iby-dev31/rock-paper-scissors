@@ -49,6 +49,12 @@ function playRound() {
         }
     }
 
+    if (humanScore == 5) {
+        alert('Win Human')
+    } else {
+        alert('Win Computer')
+    }
+
 
 }
 
