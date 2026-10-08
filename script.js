@@ -1,6 +1,9 @@
 let humanScore = 0
 let computerScore = 0
 
+const startButton = document.querySelector('#start');
+startButton.onclick = () => playRound();
+
 function getComputerChoice() {
     const random = Math.floor(Math.random() * 3);
     if (random == 0) {
@@ -30,32 +33,32 @@ function getHumanChoice() {
 }
 
 function playRound() {
-    alert('Start Games')
-    let Human = null
-    let Computer = null
+    document.querySelector('.display').innerHTML = '<h2>Games</h2>';
+    // let Human = null
+    // let Computer = null
 
-    while ((humanScore < 5) && (computerScore < 5)) {
-        Human = getHumanChoice()
-        Computer = getComputerChoice()
+    // while ((humanScore < 5) && (computerScore < 5)) {
+    //     Human = getHumanChoice()
+    //     Computer = getComputerChoice()
 
-        if ((Human == "rock" && Computer == "scissors") || (Human == "paper" && Computer == "rock") || (Human == "scissors" && Computer == "paper")) {
-            humanScore++;
-            alert(`Computer - ${Computer} ${computerScore}, Win Human - ${Human} ${humanScore}`)
-        } else if (Human == Computer) {
-            alert(`Computer - ${Computer} ${computerScore}, Human - ${Human} ${humanScore}`)
-        } else {
-            computerScore++;
-            alert(`Win Computer - ${Computer} ${computerScore}, Human - ${Human} ${humanScore}`)
-        }
-    }
+    //     if ((Human == "rock" && Computer == "scissors") || (Human == "paper" && Computer == "rock") || (Human == "scissors" && Computer == "paper")) {
+    //         humanScore++;
+    //         alert(`Computer - ${Computer} ${computerScore}, Win Human - ${Human} ${humanScore}`)
+    //     } else if (Human == Computer) {
+    //         alert(`Computer - ${Computer} ${computerScore}, Human - ${Human} ${humanScore}`)
+    //     } else {
+    //         computerScore++;
+    //         alert(`Win Computer - ${Computer} ${computerScore}, Human - ${Human} ${humanScore}`)
+    //     }
+    // }
 
-    if (humanScore == 5) {
-        alert('Win Human')
-    } else {
-        alert('Win Computer')
-    }
+    // if (humanScore == 5) {
+    //     alert('Win Human')
+    // } else {
+    //     alert('Win Computer')
+    // }
 
 
 }
 
-playRound()
+// playRound()
