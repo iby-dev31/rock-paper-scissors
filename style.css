@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
 }
 
-.red-rock {
+#red-rock {
     width: 152px;
     height: 152px;
     background: transparent url('red-rock3.png') no-repeat;
@@ -18,7 +18,12 @@ body {
     background-position: 0 0;
 }
 
-.red-paper {
+#computer {
+    width: 152px;
+    height: 152px;
+}
+
+#red-paper {
     width: 152px;
     height: 152px;
     background: transparent url('red-paper.png') no-repeat;
@@ -26,8 +31,17 @@ body {
     background-position: 0 0;
 }
 
-.red-rock:hover, .red-paper:hover {
+#red-scissors {
+    width: 152px;
+    height: 152px;
+    background: transparent url('red-scissors.png') no-repeat;
+    background-size: 152px;      /* 3 иконки по 64px */
+    background-position: 0 0;
+}
+
+#red-rock:hover, #red-paper:hover, #red-scissors:hover {
     background-position: 0 -152px;
+    cursor: pointer;
 }
 
 .display {
@@ -37,6 +51,12 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -74,4 +94,12 @@ h2 {
     border-bottom: 2px solid blue;
     border-right: 2px solid blue;
     width: 50%;
+}
+
+h2 span {
+    color: red;
+}
+
+h2 b {
+    color: blue;
 }
