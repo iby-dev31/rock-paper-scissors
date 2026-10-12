@@ -2,7 +2,8 @@ body {
     background: url('background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center center;
     margin: 0;
 }
 
@@ -102,4 +103,38 @@ h2 span {
 
 h2 b {
     color: blue;
+}
+
+@media (max-width: 1024px) {
+    h2 {
+        width: 100%;
+        border-radius: 0;
+        font-size: 20px;
+    }
+
+    .display {
+        padding: 10px 0;
+        justify-content: space-between;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    #red-paper, #red-rock, #red-scissors {
+        width: 100px;
+        height: 100px;
+        background-size: 100% auto;
+    }
+
+    #red-rock:hover, #red-paper:hover, #red-scissors:hover {
+        background-position: 0 -100px;
+        cursor: pointer;
+    }
+
+    #computer {
+        width: 100px;
+        height: 100px;
+        background-size: 100px !important; 
+    }  
 }
